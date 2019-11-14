@@ -1,5 +1,8 @@
 import React, { Fragment } from 'react';
 import { Card, Page, Heading, Subheading, DisplayText, TextContainer } from '@shopify/polaris';
+import Themee from './Themee';
+import Themee1 from './Themee1';
+
 
 import Checkbox from './Checkbox';
 
@@ -8,6 +11,7 @@ import DefaultTextField from './DefaultTextField';
 export default function Settings() {
 	return (
 		<Fragment>
+			<Themee1/>
 			<div style={{ display: 'flex', margin: '0' }}>
 				<div style={{ width: '40rem', marginRight: '1rem' }}>
 					<Card>

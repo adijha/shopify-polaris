@@ -2,6 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { Card, Tabs } from '@shopify/polaris';
 import Setting from './components/Setting';
 import Template from './components/Template';
+import History from './components/History';
 
 export default function TabsExample() {
 	const [ selected, setSelected ] = useState(0);
@@ -36,7 +37,7 @@ export default function TabsExample() {
 				return <Template />;
 				break;
 			case 'Buy More SMS':
-				return <p>Buy More SMS</p>;
+				return <History />;
 				break;
 
 			default:
@@ -46,7 +47,7 @@ export default function TabsExample() {
 
 	return (
 		<Tabs tabs={tabs} selected={selected} onSelect={handleTabChange}>
-			<Card.Section title={tabs[selected].content}>
+			<Card.Section>
 				{tabChangeHandler()}
 
 				{/* <Settings /> */}

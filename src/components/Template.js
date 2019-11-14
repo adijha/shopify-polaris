@@ -1,9 +1,8 @@
 import React, { Fragment } from 'react';
-import { Card, Tabs } from '@shopify/polaris';
+import { Button } from '@shopify/polaris';
 
 import axios from 'axios';
 
-import TemplateMsg from './TemplateMsg';
 
 export default function Template(props) {
 	let temp = {
@@ -198,10 +197,10 @@ export default function Template(props) {
 
 	return (
 		<Fragment>
-			<div className="container">
-				<div className="row justify-content-center">
+			<div className="container-fluid">
+				<div className="row ">
 					<div className="col-sm-6">
-						<div className="card text-center mt-5 shadow">
+						<div className="card mt-5 shadow">
 							<div className="card-body">
 								<h5>SMS Template Rules</h5>
 
@@ -231,7 +230,7 @@ export default function Template(props) {
 					<div className="col-sm-6">
 						<div className="card text-center mt-5 shadow">
 							<div className="card-body">
-								<h5 className="card-title">for customer</h5>
+								<h5 className="card-title">Customer Message templete</h5>
 
 								{/* <TemplateMsg /> */}
 
@@ -243,10 +242,11 @@ export default function Template(props) {
 									required
 									autoFocus
 									defaultValue={''}
+									style={{ fontSize: '15px' }}
 								/>
 
 								<hr />
-								<h5 className="card-title">for client</h5>
+								<h5 className="card-title">Admin Message Templete</h5>
 
 								<textarea
 									className="form-control"
@@ -256,13 +256,13 @@ export default function Template(props) {
 									required
 									autoFocus
 									defaultValue={''}
+									style={{ fontSize: '15px' }}
 								/>
 								<div className="invalid-feedback">Please enter Data in the textarea.</div>
 
-								<div style={{ textAlign: 'center' }}>
-									<button id="admin-btn" className="btn btn-primary my-3" onClick={saveTemplete}>
-										Save
-									</button>
+								<br />
+								<div style={{ textAlign: 'center' }} onClick={saveTemplete}>
+									<Button primary>Save theme</Button>
 								</div>
 							</div>
 						</div>
