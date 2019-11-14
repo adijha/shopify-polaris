@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { Card, Tabs } from '@shopify/polaris';
 import Setting from './components/Setting';
+import Template from './components/Template';
 
 export default function TabsExample() {
 	const [ selected, setSelected ] = useState(0);
@@ -16,18 +17,13 @@ export default function TabsExample() {
 		},
 		{
 			id: 'accepts-marketing',
-			content: 'Accepts marketing',
+			content: 'Edit Template',
 			panelID: 'accepts-marketing-content'
 		},
 		{
 			id: 'repeat-customers',
-			content: 'Repeat customers',
+			content: 'Buy More SMS',
 			panelID: 'repeat-customers-content'
-		},
-		{
-			id: 'prospects',
-			content: 'Prospects',
-			panelID: 'prospects-content'
 		}
 	];
 
@@ -35,6 +31,12 @@ export default function TabsExample() {
 		switch (tabs[selected].content) {
 			case 'Settings':
 				return <Setting />;
+				break;
+			case 'Edit Template':
+				return <Template />;
+				break;
+			case 'Buy More SMS':
+				return <p>Buy More SMS</p>;
 				break;
 
 			default:
