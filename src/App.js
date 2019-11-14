@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { Card, Tabs } from '@shopify/polaris';
+import { Card, Tabs, Page, FooterHelp, Link } from '@shopify/polaris';
 import Setting from './components/Setting';
 import Template from './components/Template';
 import History from './components/History';
@@ -46,12 +46,20 @@ export default function TabsExample() {
 	};
 
 	return (
-		<Tabs tabs={tabs} selected={selected} onSelect={handleTabChange}>
-			<Card.Section>
-				{tabChangeHandler()}
+		<Page>
+			<Tabs tabs={tabs} selected={selected} onSelect={handleTabChange}>
+				<Card.Section>
+					{tabChangeHandler()}
 
-				{/* <Settings /> */}
-			</Card.Section>
-		</Tabs>
+					{/* <Settings /> */}
+				</Card.Section>
+			</Tabs>
+			<FooterHelp>
+				Learn more about{' '}
+				<Link url="https://help.shopify.com/manual" external>
+					Mojitolabs
+				</Link>
+			</FooterHelp>
+		</Page>
 	);
 }

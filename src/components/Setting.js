@@ -1,18 +1,15 @@
 import React, { Fragment } from 'react';
-import { Card, Page, Heading, Subheading, DisplayText, TextContainer } from '@shopify/polaris';
+import { Button } from '@shopify/polaris';
 import Themee from './Themee';
-import Themee1 from './Themee1';
+import Themes from './Themes';
 
 
-import Checkbox from './Checkbox';
-
-import DefaultTextField from './DefaultTextField';
 
 export default function Settings() {
 	return (
 		<Fragment>
-			<Themee1/>
-			<div style={{ display: 'flex', margin: '0' }}>
+			<Themes />
+			{/* <div style={{ display: 'flex', margin: '0' }}>
 				<div style={{ width: '40rem', marginRight: '1rem' }}>
 					<Card>
 						<div style={{ padding: '3rem', width: '35rem' }}>
@@ -27,16 +24,16 @@ export default function Settings() {
 						</div>
 					</Card>
 				</div>
-			</div>
+			</div> */}
 
-			<br />
+			{/* <br /> */}
 
-			<div>
+			{/* <div>
 				<div style={{ marginBottom: '5px' }}>
-					<Heading size="large">SMS Notification Prefrence</Heading>
-				</div>
-				<Card>
-					<div style={{ padding: '2rem' }}>
+					<Heading size="large">SMS Notification Prefrence</Heading> */}
+			{/* </div>
+				<Card> */}
+			{/* <div style={{ padding: '2rem' }}>
 						<DisplayText size="small">Orders</DisplayText>
 						<hr />
 
@@ -119,11 +116,11 @@ export default function Settings() {
 							</div>
 							<Checkbox label="Notify Admin" />
 						</div>
-					</div>
-				</Card>
-			</div>
+					</div> */}
+			{/* </Card>
+			</div> */}
 
-			<TextContainer>
+			{/* <TextContainer>
 				<DisplayText size="small">What is Sender ID?</DisplayText>
 				<p>
 					Manage your Shopify store on-the-go with real-time notifications, access to your dashboard, and order
@@ -133,7 +130,11 @@ export default function Settings() {
 					Shopify POS is the fastest and easiest way to start accepting Visa, Mastercard, American Express, and Discover
 					right from your smartphone or tablet.
 				</p>
-			</TextContainer>
+			</TextContainer> */}
+			<br/>
+			<div style={{ textAlign: 'right' }} onClick={() => {}}>
+				<Button primary>Save</Button>
+			</div>
 		</Fragment>
 	);
 }
