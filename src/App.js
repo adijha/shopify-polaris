@@ -1,41 +1,54 @@
-import React from 'react';
-import {Card, DataTable, Page} from '@shopify/polaris';
+import React, { useCallback, useState } from 'react';
+import { Card, Tabs } from '@shopify/polaris';
+import Setting from './components/Setting';
 
-export default function DataTableExample() {
-  const rows = [
-    ['Emerald Silk Gown', '$875.00', 124689, 140, '$122,500.00'],
-    ['Mauve Cashmere Scarf', '$230.00', 124533, 83, '$19,090.00'],
-    [
-      'Navy Merino Wool Blazer with khaki chinos and yellow belt',
-      '$445.00',
-      124518,
-      32,
-      '$14,240.00',
-    ],
-  ];
+export default function TabsExample() {
+	const [ selected, setSelected ] = useState(0);
 
-  return (
-    <Page title="Sales by product">
-      <Card>
-        <DataTable
-          columnContentTypes={[
-            'text',
-            'numeric',
-            'numeric',
-            'numeric',
-            'numeric',
-          ]}
-          headings={[
-            'Product',
-            'Price',
-            'SKU Number',
-            'Net quantity',
-            'Net sales',
-          ]}
-          rows={rows}
-          totals={['', '', '', 255, '$155,830.00']}
-        />
-      </Card>
-    </Page>
-  );
+	const handleTabChange = useCallback((selectedTabIndex) => setSelected(selectedTabIndex), []);
+
+	const tabs = [
+		{
+			id: 'all-customers',
+			content: 'Settings',
+			accessibilityLabel: 'All customers',
+			panelID: 'all-customers-content'
+		},
+		{
+			id: 'accepts-marketing',
+			content: 'Accepts marketing',
+			panelID: 'accepts-marketing-content'
+		},
+		{
+			id: 'repeat-customers',
+			content: 'Repeat customers',
+			panelID: 'repeat-customers-content'
+		},
+		{
+			id: 'prospects',
+			content: 'Prospects',
+			panelID: 'prospects-content'
+		}
+	];
+
+	const tabChangeHandler = (params) => {
+		switch (tabs[selected].content) {
+			case 'Settings':
+				return <Setting />;
+				break;
+
+			default:
+				break;
+		}
+	};
+
+	return (
+		<Tabs tabs={tabs} selected={selected} onSelect={handleTabChange}>
+			<Card.Section title={tabs[selected].content}>
+				{tabChangeHandler()}
+
+				{/* <Settings /> */}
+			</Card.Section>
+		</Tabs>
+	);
 }
