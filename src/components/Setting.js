@@ -26,7 +26,7 @@ export default function Settings() {
 					>
 						<Card sectioned>
 							<div style={{ padding: '3rem' }}>
-								<DefaultTextField elpText label="Sender ID" type="text" maxLength="6" />
+								<DefaultTextField helpText label="Sender ID" type="text" maxLength="6" />
 							</div>
 						</Card>
 					</Layout.AnnotatedSection>
