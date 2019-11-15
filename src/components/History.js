@@ -1,17 +1,28 @@
 import React from 'react';
-import {EmptyState} from '@shopify/polaris';
+import {DescriptionList} from '@shopify/polaris';
 
-export default class App extends React.Component {
+export default class History extends React.Component {
   render() {
     return (
-      <EmptyState
-  heading="Manage your inventory transfers"
-  action={{content: 'Add transfer'}}
-  secondaryAction={{content: 'Learn more', url: 'https://help.shopify.com'}}
-  image="https://cdn.shopify.com/s/files/1/0757/9955/files/empty-state.svg"
->
-  <p>Track and receive your incoming inventory from suppliers.</p>
-</EmptyState>
+      <DescriptionList
+  items={[
+    {
+      term: 'Logistics',
+      description:
+        'The management of products or other resources as they travel between a point of origin and a destination.',
+    },
+    {
+      term: 'Sole proprietorship',
+      description:
+        'A business structure where a single individual both owns and runs the company.',
+    },
+    {
+      term: 'Discount code',
+      description:
+        'A series of numbers and/or letters that an online shopper may enter at checkout to get a discount or special offer.',
+    },
+  ]}
+/>
     );
   }
 }
