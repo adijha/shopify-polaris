@@ -22,7 +22,7 @@ export default function Settings() {
               <Card sectioned>
                 <div style={{ padding: "3rem" }}>
                   <DefaultTextField
-                    name="admin-no"
+                    name="admin no"
                     label="Admin Phone No."
                     type="text"
                     maxLength="10"
@@ -37,7 +37,7 @@ export default function Settings() {
               <Card sectioned>
                 <div style={{ padding: "3rem" }}>
                   <DefaultTextField
-                    name="sender-id"
+                    name="sender id"
                     label="Sender ID"
                     type="text"
                     maxLength="6"
@@ -60,9 +60,13 @@ export default function Settings() {
                     </div>
 
                     <div style={{ width: "15rem" }}>
-                      <Checkbox label="Notify Customer" hell="orders/create" />
+                      <Checkbox
+                        name="orders/create customer"
+                        label="Notify Customer"
+                        hell="orders/create"
+                      />
                     </div>
-                    <Checkbox label="Notify Admin" />
+                    <Checkbox label="Notify Admin" name="orders/create admin" />
                   </div>
                   <div style={{ display: "flex" }}>
                     <div style={{ marginRight: "1rem", width: "15rem" }}>
@@ -70,9 +74,15 @@ export default function Settings() {
                     </div>
 
                     <div style={{ width: "15rem" }}>
-                      <Checkbox label="Notify Customer" />
+                      <Checkbox
+                        label="Notify Customer"
+                        name="orders/cancelled customer"
+                      />
                     </div>
-                    <Checkbox label="Notify Admin" />
+                    <Checkbox
+                      label="Notify Admin"
+                      name="orders/cancelled admin"
+                    />
                   </div>
                   {/* <div style={{ display: 'flex' }}>
 									<div style={{ marginRight: '1rem', width: '15rem' }}>
@@ -100,9 +110,15 @@ export default function Settings() {
                     </div>
 
                     <div style={{ width: "15rem" }}>
-                      <Checkbox label="Notify Customer" />
+                      <Checkbox
+                        label="Notify Customer"
+                        name="orders/fullfilled customer"
+                      />
                     </div>
-                    <Checkbox label="Notify Admin" />
+                    <Checkbox
+                      label="Notify Admin"
+                      name="orders/fullfilled admin"
+                    />
                   </div>
 
                   {/* <br />
@@ -140,11 +156,6 @@ export default function Settings() {
         </div>
         <br />
         <div style={{ textAlign: "right" }} onClick={() => {}}>
-          <div type="submit">
-            <Button type="submit" primary>
-              Save
-            </Button>
-          </div>
           <button type="submit">save</button>
         </div>
       </form>
