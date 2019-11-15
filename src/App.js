@@ -6,6 +6,7 @@ import './App.css';
 import Setting from './components/Setting';
 import Template from './components/Template';
 import History from './components/History';
+import BuyMoreSMS from './components/BuyMoreSMS';
 
 export default function TabsExample() {
 	const [ selected, setSelected ] = useState(0);
@@ -26,8 +27,13 @@ export default function TabsExample() {
 		},
 		{
 			id: 'repeat-customers',
-			content: 'Buy More SMS',
+			content: 'SMS History',
 			panelID: 'repeat-customers-content'
+		},
+		{
+			id: 'buy-more-sms',
+			content: 'Buy More SMS',
+			panelID: 'buy-more-sms-content'
 		}
 	];
 
@@ -40,6 +46,8 @@ export default function TabsExample() {
 				return <Template />;
 
 			case 'Buy More SMS':
+				return <BuyMoreSMS />;
+			case 'SMS History':
 				return <History />;
 
 			default:
