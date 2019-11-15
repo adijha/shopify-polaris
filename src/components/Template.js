@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useCallback, useEffect } from 'react';
+import React, { Fragment, useState } from 'react';
 import { Button, Card } from '@shopify/polaris';
 
 import axios from 'axios';
@@ -161,7 +161,7 @@ export default function Template(props) {
 		<Fragment>
 			<h2>Select Topic</h2>
 
-			<div id="snackbar">Template Updated for {topics.topic} &nbsp;👍 </div>
+			<div id="snackbar">Template Updated for {topics.topic} </div>
 			<br />
 			<div className="bog col-md-12">
 				<div className="butti " onClick={topicHandler}>
@@ -174,7 +174,7 @@ export default function Template(props) {
 				<div className="butt " onClick={topicHandler}>
 					orders/fulfilled
 				</div>
-				<div className="butt " onClick={topicHandler}>
+				{/* <div className="butt " onClick={topicHandler}>
 					orders/partially_fulfilled
 				</div>
 				<div className="butt " onClick={topicHandler}>
@@ -182,7 +182,7 @@ export default function Template(props) {
 				</div>
 				<div className="butt " onClick={topicHandler}>
 					refunds/create
-				</div>
+				</div> */}
 			</div>
 
 			<div className="row ">

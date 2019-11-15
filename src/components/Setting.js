@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useState, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { Card, Layout, Heading, Button } from '@shopify/polaris';
 
 import Checkbox from './Checkbox';
@@ -59,7 +59,7 @@ export default function Settings() {
 									</div>
 									<Checkbox label="Notify Admin" />
 								</div>
-								<div style={{ display: 'flex' }}>
+								{/* <div style={{ display: 'flex' }}>
 									<div style={{ marginRight: '1rem', width: '15rem' }}>
 										<Heading>Fulfilled </Heading>
 									</div>
@@ -68,8 +68,8 @@ export default function Settings() {
 										<Checkbox label="Notify Customer" />
 									</div>
 									<Checkbox label="Notify Admin" />
-								</div>
-								<div style={{ display: 'flex' }}>
+								</div> */}
+								{/* <div style={{ display: 'flex' }}>
 									<div style={{ marginRight: '1rem', width: '15rem' }}>
 										<Heading>Partially Fulfilled </Heading>
 									</div>
@@ -78,10 +78,10 @@ export default function Settings() {
 										<Checkbox label="Notify Customer" />
 									</div>
 									<Checkbox label="Notify Admin" />
-								</div>
+								</div> */}
 								<div style={{ display: 'flex' }}>
 									<div style={{ marginRight: '1rem', width: '15rem' }}>
-										<Heading>Paid </Heading>
+										<Heading>Fullfilled </Heading>
 									</div>
 
 									<div style={{ width: '15rem' }}>
@@ -90,7 +90,7 @@ export default function Settings() {
 									<Checkbox label="Notify Admin" />
 								</div>
 
-								<br />
+								{/* <br />
 								<p style={{ fontSize: '17px' }}>Customers Account</p>
 								<hr />
 
@@ -106,8 +106,8 @@ export default function Settings() {
 								</div>
 								<br />
 								<p style={{ fontSize: '17px' }}>Refund</p>
-								<hr />
-
+								<hr /> */}
+								{/* 
 								<div style={{ display: 'flex' }}>
 									<div style={{ marginRight: '1rem', width: '15rem' }}>
 										<Heading>Create </Heading>
@@ -117,7 +117,7 @@ export default function Settings() {
 										<Checkbox label="Notify Customer" />
 									</div>
 									<Checkbox label="Notify Admin" />
-								</div>
+								</div> */}
 							</div>
 						</Card>
 					</Layout.AnnotatedSection>

@@ -20,7 +20,7 @@ body {
 	padding: 0;
 	cursor: unset;
 }
-@media (max-width: 600px) {
+@media (max-width: 400px) {
 	.bog {
 		display: inline;
 	}

@@ -14,15 +14,15 @@ export default function TabsExample() {
 
 	const tabs = [
 		{
-			id: 'accepts-marketing',
-			content: 'Edit Template',
-			panelID: 'accepts-marketing-content'
-		},
-		{
 			id: 'all-customers',
 			content: 'Settings',
 			accessibilityLabel: 'All customers',
 			panelID: 'all-customers-content'
+		},
+		{
+			id: 'accepts-marketing',
+			content: 'Edit Template',
+			panelID: 'accepts-marketing-content'
 		},
 		{
 			id: 'repeat-customers',
@@ -35,13 +35,12 @@ export default function TabsExample() {
 		switch (tabs[selected].content) {
 			case 'Settings':
 				return <Setting />;
-				break;
+
 			case 'Edit Template':
 				return <Template />;
-				break;
+
 			case 'Buy More SMS':
 				return <History />;
-				break;
 
 			default:
 				break;
