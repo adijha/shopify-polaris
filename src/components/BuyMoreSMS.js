@@ -3,6 +3,7 @@ import { EmptyState } from '@shopify/polaris';
 
 export default class App extends React.Component {
 	render() {
+	
 		function myFunction() {
 			var x = document.getElementById('snackbar');
 			x.className = 'show';
