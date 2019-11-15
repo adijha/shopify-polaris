@@ -1,9 +1,16 @@
-import React, { Fragment } from "react";
-import { Card, Layout, Heading, Button } from "@shopify/polaris";
+import React, { Fragment } from 'react';
+import { Card, Layout, Heading, Button } from '@shopify/polaris';
 
-import Checkbox from "./Checkbox";
+import Checkbox from './Checkbox';
 
-import DefaultTextField from "./DefaultTextField";
+import DefaultTextField from './DefaultTextField';
+function myFunction() {
+	var x = document.getElementById('snackbar');
+	x.className = 'show';
+	setTimeout(function() {
+		x.className = x.className.replace('show', '');
+	}, 2000);
+}
 
 export default function Settings() {
   return (
@@ -54,10 +61,10 @@ export default function Settings() {
                   <p style={{ fontSize: "17px" }}>Orders</p>
                   <hr />
 
-                  <div style={{ display: "flex" }}>
-                    <div style={{ marginRight: "1rem", width: "15rem" }}>
-                      <Heading>Create </Heading>
-                    </div>
+									<div style={{ display: 'flex' }}>
+										<div style={{ marginRight: '1rem', width: '15rem' }}>
+											<Heading>Create </Heading>
+										</div>
 
                     <div style={{ width: "15rem" }}>
                       <Checkbox
@@ -94,7 +101,7 @@ export default function Settings() {
 									</div>
 									<Checkbox label="Notify Admin" />
 								</div> */}
-                  {/* <div style={{ display: 'flex' }}>
+									{/* <div style={{ display: 'flex' }}>
 									<div style={{ marginRight: '1rem', width: '15rem' }}>
 										<Heading>Partially Fulfilled </Heading>
 									</div>
@@ -104,10 +111,10 @@ export default function Settings() {
 									</div>
 									<Checkbox label="Notify Admin" />
 								</div> */}
-                  <div style={{ display: "flex" }}>
-                    <div style={{ marginRight: "1rem", width: "15rem" }}>
-                      <Heading>Fullfilled </Heading>
-                    </div>
+									<div style={{ display: 'flex' }}>
+										<div style={{ marginRight: '1rem', width: '15rem' }}>
+											<Heading>Fullfilled </Heading>
+										</div>
 
                     <div style={{ width: "15rem" }}>
                       <Checkbox
@@ -121,7 +128,7 @@ export default function Settings() {
                     />
                   </div>
 
-                  {/* <br />
+									{/* <br />
 								<p style={{ fontSize: '17px' }}>Customers Account</p>
 								<hr />
 
@@ -138,7 +145,7 @@ export default function Settings() {
 								<br />
 								<p style={{ fontSize: '17px' }}>Refund</p>
 								<hr /> */}
-                  {/* 
+									{/* 
 								<div style={{ display: 'flex' }}>
 									<div style={{ marginRight: '1rem', width: '15rem' }}>
 										<Heading>Create </Heading>

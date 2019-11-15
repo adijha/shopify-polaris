@@ -59,12 +59,12 @@ body {
 	color: #fff;
 	text-align: center;
 	border-radius: 5px;
-	padding: 16px;
+	padding: 15px;
 	position: fixed;
 	z-index: 1;
 	left: 50%;
 	bottom: 30px;
-	font-size: 17px;
+	font-size: 16px;
 }
 
 #snackbar.show {
@@ -115,4 +115,19 @@ body {
 		bottom: 0;
 		opacity: 0;
 	}
+}
+
+.button-shopify {
+	color: white;
+	background-color: #5c6ac4;
+	border: 1px solid #2c3ca3;
+	/* height: 35px; */
+	padding: 7px 16px;
+	font-size: 14px;
+	border-radius: 5px;
+	cursor: pointer;
+	/* width: 100px; */
+}
+.button-shopify:hover {
+	background-color: #4a59b9;
 }
