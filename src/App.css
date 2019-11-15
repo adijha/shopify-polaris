@@ -16,9 +16,14 @@ body {
 	height: 3.3rem;
 	border-radius: 2px;
 	display: flex;
-	width: 100%;
+	/* width: 100%; */
 	padding: 0;
 	cursor: unset;
+}
+@media (max-width: 600px) {
+	.bog {
+		display: inline;
+	}
 }
 
 .butt {
@@ -50,10 +55,10 @@ body {
 	visibility: hidden;
 	min-width: 250px;
 	margin-left: -125px;
-	background-color: #333;
+	background-color: #5c6ac4;
 	color: #fff;
 	text-align: center;
-	border-radius: 2px;
+	border-radius: 5px;
 	padding: 16px;
 	position: fixed;
 	z-index: 1;
