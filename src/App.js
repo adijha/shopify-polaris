@@ -1,5 +1,8 @@
 import React, { useCallback, useState } from 'react';
 import { Card, Tabs, Page, FooterHelp, Link } from '@shopify/polaris';
+
+import './App.css';
+
 import Setting from './components/Setting';
 import Template from './components/Template';
 import History from './components/History';
@@ -11,15 +14,15 @@ export default function TabsExample() {
 
 	const tabs = [
 		{
+			id: 'accepts-marketing',
+			content: 'Edit Template',
+			panelID: 'accepts-marketing-content'
+		},
+		{
 			id: 'all-customers',
 			content: 'Settings',
 			accessibilityLabel: 'All customers',
 			panelID: 'all-customers-content'
-		},
-		{
-			id: 'accepts-marketing',
-			content: 'Edit Template',
-			panelID: 'accepts-marketing-content'
 		},
 		{
 			id: 'repeat-customers',
@@ -56,7 +59,7 @@ export default function TabsExample() {
 			</Tabs>
 			<FooterHelp>
 				Learn more about{' '}
-				<Link url="https://help.shopify.com/manual" external>
+				<Link url="https://adijha.com" external>
 					Mojitolabs
 				</Link>
 			</FooterHelp>
