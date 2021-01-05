@@ -2,7 +2,7 @@
   "dependencies": {
     "@shopify/polaris": "latest",
     "@shopify/polaris-icons": "latest",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.3.1",
     "react": "latest",
     "react-dom": "latest"
